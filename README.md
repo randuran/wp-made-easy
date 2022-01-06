@@ -2,7 +2,7 @@
 
 A brief description of what this project does and who it's for
 
-### Custom Post Types
+### 1. Custom Post Types
 
 ```php
 use Randyduran\Traits\WithPostType;
@@ -18,7 +18,7 @@ class Example() {
 }
 ```
 
-### Custom Tanoxomies
+### 2. Custom Tanoxomies
 
 ```php
 use Randyduran\Traits\WithTaxonomy;
@@ -30,6 +30,22 @@ class Example() {
   public function foo()
   {
     $this->taxonomies[]; //register the taxonomies
+  }
+}
+```
+
+### 3. Custom Tanoxomies
+
+```php
+use Randyduran\Traits\WithShortcode;
+
+class Example() {
+
+  use WithShortcode; //Include the shortcode trait
+
+  public function foo()
+  {
+    $this->shortcodes[]; //register the shortcodes
   }
 }
 ```
