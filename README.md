@@ -8,11 +8,12 @@ A brief description of what this project does and who it's for
 use Randyduran\Traits\WithPostType;
 
 class Example() {
-  use WithPostType;
+
+  use WithPostType; //Include the custom post type trait
 
   public function foo()
   {
-    $this->postTypes[];
+    $this->postTypes[]; //register the custom post type
   }
 }
 
