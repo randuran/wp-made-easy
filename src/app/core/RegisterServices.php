@@ -4,7 +4,6 @@ namespace Randyduran\App\Core;
 
 class RegisterServices
 {
-
     /**
      * Loop through the classes, initialize them
      * and call the boot() method if it exist
