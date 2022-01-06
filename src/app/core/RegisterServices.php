@@ -11,9 +11,9 @@ class RegisterServices
      * 
      * @return void
      */
-    public function register_services()
+    public static function register_services()
     {
-        foreach ($this->services as $class) {
+        foreach (self::services() as $class) {
             $service = self::instantiate($class);
             if (method_exists($service, 'boot')) {
                 $service->boot();
