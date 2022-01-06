@@ -1,0 +1,22 @@
+{
+  "name": "randyduran/wp-utilities",
+  "description": "A package that simplifies the task of creating plugins and templates in WordPress",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Randyduran\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Randy Durán",
+      "email": "randy.duran@insimia.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "require-dev": {
+    "symfony/var-dumper": "^5.0"
+  }
+}
