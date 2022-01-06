@@ -25,13 +25,13 @@ trait WithPage
     {
         foreach ($this->pages as $page) {
             add_menu_page(
-                $page['title'], // page <title>Title</title>
-                $page['menu_title'], // menu link text
-                $page['capability'], // capability to access the page
-                $page['slug'], // page URL slug
-                $page['callback'], // callback function /w content
-                $page['icon'], // menu icon
-                $page['position'] // priority
+                $page['title'],
+                $page['menu_title'],
+                $page['capability'],
+                $page['slug'],
+                $page['callback'],
+                $page['icon'],
+                $page['position']
             );
         }
     }
