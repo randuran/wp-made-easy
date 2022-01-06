@@ -2,7 +2,7 @@
 
 namespace Randyduran\App\Core;
 
-trait RegisterServices
+class RegisterServices
 {
 
     /**
@@ -11,7 +11,7 @@ trait RegisterServices
      * 
      * @return void
      */
-    public static function register_services()
+    public function register_services()
     {
         foreach ($this->services as $class) {
             $service = self::instantiate($class);
