@@ -1,10 +1,9 @@
 <?php
 
-namespace Randyduran\App;
+namespace Randyduran\App\Core;
 
-class RegisterServices
+trait RegisterServices
 {
-
     /**
      * Loop through the classes, initialize them
      * and call the boot() method if it exist
@@ -13,7 +12,7 @@ class RegisterServices
      */
     public static function register_services()
     {
-        foreach (self::services() as $class) {
+        foreach ($this->services as $class) {
             $service = self::instantiate($class);
             if (method_exists($service, 'boot')) {
                 $service->boot();

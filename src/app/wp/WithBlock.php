@@ -1,6 +1,6 @@
 <?php
 
-namespace Randyduran\Traits;
+namespace Randyduran\App\WP;
 
 trait WithBlock
 {

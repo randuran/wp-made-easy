@@ -1,8 +1,8 @@
 <?php
 
-namespace Randyduran\Traits;
+namespace Randyduran\App\WP;
 
-trait WithTaxonomy
+trait WithShortcode
 {
     public $taxonomies = [];
 
