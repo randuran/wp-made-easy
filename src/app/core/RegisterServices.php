@@ -2,7 +2,7 @@
 
 namespace Randyduran\App\Core;
 
-class RegisterServices
+trait RegisterServices
 {
 
     /**
