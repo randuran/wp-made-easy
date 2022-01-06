@@ -2,7 +2,7 @@
 
 A brief description of what this project does and who it's for
 
-## Custom Post Types
+### Custom Post Types
 
 ```php
 use Randyduran\Traits\WithPostType;
