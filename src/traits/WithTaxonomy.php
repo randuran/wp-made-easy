@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Traits;
+namespace Randyduran\Traits;
 
-trait WithTayonomy
+trait WithTaxonomy
 {
     public $taxonomies = [];
 
