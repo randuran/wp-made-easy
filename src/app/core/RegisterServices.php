@@ -2,7 +2,7 @@
 
 namespace Randyduran\App\Core;
 
-trait RegisterServices
+class RegisterServices
 {
     /**
      * Loop through the classes, initialize them
