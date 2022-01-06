@@ -16,4 +16,22 @@ class Example() {
     $this->postTypes[]; //register the custom post type
   }
 }
+```
+
+### Custom Tanoxomies
+
+```php
+use Randyduran\Traits\WithTaxonomy;
+
+class Example() {
+
+  use WithTaxonomy; //Include the taxonomy trait
+
+  public function foo()
+  {
+    $this->taxonomies[]; //register the taxonomies
+  }
+}
+```
+
 
