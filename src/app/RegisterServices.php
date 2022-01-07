@@ -1,6 +1,6 @@
 <?php
 
-namespace Randyduran\App;
+namespace Randyduran\App\Core;
 
 class RegisterServices
 {
@@ -10,13 +10,15 @@ class RegisterServices
      * 
      * @return void
      */
-    public function register_services()
+    public function register_services(): void
     {
         foreach ($this->services as $class) {
             $service = self::instantiate($class);
             if (method_exists($service, 'boot')) {
                 $service->boot();
             }
+
+            self::registerTraits($service);
         }
     }
 
@@ -26,9 +28,22 @@ class RegisterServices
      * @return class new instance of the class
      * 
      */
-    private static function instantiate($class)
+    private static function instantiate($class): object
     {
         $service = new $class();
         return $service;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param [type] $service
+     * @return void
+     */
+    private static function registerTraits($service): void
+    {
+        if (method_exists($service, 'registerPages')) {
+            $service->registerPages();
+        }
     }
 }
