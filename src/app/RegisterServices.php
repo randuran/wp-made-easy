@@ -43,10 +43,10 @@ class RegisterServices
     private static function bootTraits($service): void
     {
         /**
-         * Boot WithPage if trait is found in the class.
+         * Boot WithOptionPage if trait is found in the class.
          */
-        if (method_exists($service, 'bootWithPage')) {
-            $service->bootWithPage();
+        if (method_exists($service, 'WithOptionPage')) {
+            $service->bootWithOptionPage();
         }
 
         /**

@@ -2,7 +2,7 @@
 
 namespace Randyduran\Traits;
 
-trait WithPage
+trait WithOptionPage
 {
     public $pages = [];
 
@@ -11,7 +11,7 @@ trait WithPage
      *
      * @return void
      */
-    final public function bootWithPage()
+    final public function bootWithOptionPage()
     {
         if (count($this->pages)) {
             add_action('admin_menu', [$this, 'register_menu_pages']);
