@@ -18,7 +18,7 @@ class RegisterServices
                 $service->boot();
             }
 
-            self::registerTraits($service);
+            self::bootTraits($service);
         }
     }
 
@@ -35,12 +35,12 @@ class RegisterServices
     }
 
     /**
-     * Undocumented function
+     * Initializes traits if they are found in class
      *
      * @param [type] $service
      * @return void
      */
-    private static function registerTraits($service): void
+    private static function bootTraits($service): void
     {
         /**
          * Boot WithPage if trait is found in the class.
