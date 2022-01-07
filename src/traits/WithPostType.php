@@ -54,7 +54,7 @@ trait WithPostType
 
             $args = array(
                 'labels'                => $labels,
-                'menu_icon'             => isset($postType['menu_icon']) ? $postType['menu_icon'] : 'dashicons-admin-customizer',
+                'menu_icon'             => isset($postType['menu_icon']) ? $postType['menu_icon'] : 'dashicons-admin-post',
                 'description'           => __($postType['description'], $postType['text_domain']),
                 'supports'              => $postType['supports'],
                 'taxonomies'            => $postType['taxonomies'],
