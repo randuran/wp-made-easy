@@ -36,7 +36,7 @@ trait WithPage
                 $page['menu_title'],
                 $page['capability'],
                 $page['slug'],
-                [$this, $page['callback']],
+                $page['callback'],
                 $page['icon'],
                 $page['position']
             );
