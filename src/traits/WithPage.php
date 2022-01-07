@@ -37,7 +37,7 @@ trait WithPage
             );
 
             if (isset($page['children'])) {
-                foreach ($page['children'] as $child) {
+                foreach ($page['children'] as $position => $child) {
                     add_submenu_page(
                         $page['slug'],
                         $child['title'],
@@ -45,7 +45,7 @@ trait WithPage
                         $child['capability'],
                         $child['slug'],
                         $child['callback'],
-                        $child['position'],
+                        $position,
                     );
                 }
             }
