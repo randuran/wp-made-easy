@@ -45,7 +45,7 @@ trait WithPage
                         $child['capability'],
                         $child['slug'],
                         $child['callback'],
-                        $position + 1,
+                        $position + 1
                     );
                 }
             }
