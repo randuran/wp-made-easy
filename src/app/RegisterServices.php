@@ -1,6 +1,6 @@
 <?php
 
-namespace Randyduran\App\Core;
+namespace Randyduran\App;
 
 class RegisterServices
 {
