@@ -46,35 +46,35 @@ class RegisterServices
          * Boot WithPage if trait is found in the class.
          */
         if (method_exists($service, 'bootWithPage')) {
-            $service::bootWithPage();
+            $service->bootWithPage();
         }
 
         /**
          * Boot WithPostType if trait is found in the class.
          */
         if (method_exists($service, 'bootWithPostType')) {
-            $service::bootWithPostType();
+            $service->bootWithPostType();
         }
 
         /**
          * Boot WithTaxonomy if trait is found in the class.
          */
         if (method_exists($service, 'bootWithTaxonomy')) {
-            $service::bootWithTaxonomy();
+            $service->bootWithTaxonomy();
         }
 
         /**
          * Boot WithShortcode if trait is found in the class.
          */
         if (method_exists($service, 'bootWithShortcode')) {
-            $service::bootWithShortcode();
+            $service->bootWithShortcode();
         }
 
         /**
          * Boot WithBlock if trait is found in the class.
          */
         if (method_exists($service, 'bootWithBlock')) {
-            $service::bootWithBlock();
+            $service->bootWithBlock();
         }
     }
 }
