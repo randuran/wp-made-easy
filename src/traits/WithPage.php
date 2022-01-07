@@ -37,15 +37,17 @@ trait WithPage
             );
 
             if (isset($page['children'])) {
-                add_submenu_page(
-                    $page['slug'],
-                    $page['children']['title'],
-                    $page['children']['menu_title'],
-                    $page['children']['capability'],
-                    $page['children']['slug'],
-                    $page['children']['callback'],
-                    $page['children']['position'],
-                );
+                foreach ($page['children'] as $child) {
+                    add_submenu_page(
+                        $page['slug'],
+                        $child['title'],
+                        $child['menu_title'],
+                        $child['capability'],
+                        $child['slug'],
+                        $child['callback'],
+                        $child['position'],
+                    );
+                }
             }
         }
     }
