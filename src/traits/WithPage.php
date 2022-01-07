@@ -11,7 +11,7 @@ trait WithPage
      *
      * @return void
      */
-    public function registerPages()
+    final public static function bootWithPage()
     {
         if (count($this->pages)) {
             add_action('admin_menu', [$this, 'register_menu_pages']);
@@ -23,7 +23,7 @@ trait WithPage
      *
      * @return void
      */
-    public function register_menu_pages()
+    final public function register_menu_pages()
     {
         foreach ($this->pages as $page) {
             add_menu_page(

@@ -6,7 +6,7 @@ trait WithBlock
 {
     public $blocks = [];
 
-    public function registerBlocks()
+    final public function bootWithBlock()
     {
     }
 }

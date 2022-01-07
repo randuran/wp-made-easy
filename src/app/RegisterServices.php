@@ -24,9 +24,9 @@ class RegisterServices
 
     /**
      * Initialize the class
+     * 
      * @param class class from the services array
      * @return class new instance of the class
-     * 
      */
     private static function instantiate($class): object
     {
@@ -42,8 +42,39 @@ class RegisterServices
      */
     private static function registerTraits($service): void
     {
-        if (method_exists($service, 'registerPages')) {
-            $service->registerPages();
+        /**
+         * Boot WithPage if trait is found in the class.
+         */
+        if (method_exists($service, 'bootWithPage')) {
+            $service::bootWithPage();
+        }
+
+        /**
+         * Boot WithPostType if trait is found in the class.
+         */
+        if (method_exists($service, 'bootWithPostType')) {
+            $service::bootWithPostType();
+        }
+
+        /**
+         * Boot WithTaxonomy if trait is found in the class.
+         */
+        if (method_exists($service, 'bootWithTaxonomy')) {
+            $service::bootWithTaxonomy();
+        }
+
+        /**
+         * Boot WithShortcode if trait is found in the class.
+         */
+        if (method_exists($service, 'bootWithShortcode')) {
+            $service::bootWithShortcode();
+        }
+
+        /**
+         * Boot WithBlock if trait is found in the class.
+         */
+        if (method_exists($service, 'bootWithBlock')) {
+            $service::bootWithBlock();
         }
     }
 }

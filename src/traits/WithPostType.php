@@ -6,7 +6,7 @@ trait WithPostType
 {
     public $postTypes = [];
 
-    public function registerPages()
+    final public static function bootWithPostType()
     {
     }
 }

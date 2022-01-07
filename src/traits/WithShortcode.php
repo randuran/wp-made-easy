@@ -6,7 +6,7 @@ trait WithShortcode
 {
     public $taxonomies = [];
 
-    public function registerTaxonomies()
+    final public static function bootWithShortcode()
     {
     }
 }

@@ -6,7 +6,7 @@ trait WithTaxonomy
 {
     public $taxonomies = [];
 
-    public function registerTaxonomies()
+    final public static function bootWithTaxonomy()
     {
     }
 }
