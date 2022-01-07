@@ -51,25 +51,27 @@ trait WithPostType
                 'items_list_navigation' => __('Items list navigation', $postType['text_domain']),
                 'filter_items_list'     => __('Filter items list', $postType['text_domain']),
             ];
+
             $args = array(
-                'label'                 => __($postType['name'], $postType['text_domain']),
-                'description'           => __('Post Type Description', $postType['text_domain']),
                 'labels'                => $labels,
-                'supports'              => isset($postType['supports']) ? false : true,
+                'description'           => __('Post Type Description', $postType['text_domain']),
+                'supports'              => $postType['supports'],
                 'taxonomies'            => $postType['taxonomies'],
-                'hierarchical'          => isset($postType['hierarchical']) ? false : true,
-                'public'                => isset($postType['public']) ? true : false,
-                'show_ui'               => isset($postType['show_ui']) ? true : false,
-                'show_in_menu'          => isset($postType['show_in_menu']) ? true : false,
+                'hierarchical'          => isset($postType['hierarchical']) ? $postType['hierarchical'] : false,
+                'public'                => isset($postType['public']) ? $postType['public'] : true,
+                'show_ui'               => isset($postType['show_ui']) ?  $postType['show_ui'] : true,
+                'show_in_rest'          => isset($postType['show_in_rest']) ?  $postType['show_in_rest'] : true,
+                'show_in_menu'          => isset($postType['show_in_menu']) ? $postType['show_in_menu'] : true,
                 'menu_position'         => isset($postType['position']) ? $postType['position'] : 5,
-                'show_in_admin_bar'     => isset($postType['show_in_admin_bar']) ? true : false,
-                'show_in_nav_menus'     => isset($postType['show_in_nav_menus']) ? true : false,
-                'can_export'            => isset($postType['can_export']) ? true : false,
-                'has_archive'           => isset($postType['has_archive']) ? true : false,
-                'exclude_from_search'   => isset($postType['exclude_from_search']) ? false : true,
-                'publicly_queryable'    => isset($postType['publicly_queryable']) ? true : false,
-                'capability_type'       => isset($postType['capability_type']) ? 'page' : 'post',
+                'show_in_admin_bar'     => isset($postType['show_in_admin_bar']) ? $postType['show_in_admin_bar'] : true,
+                'show_in_nav_menus'     => isset($postType['show_in_nav_menus']) ? $postType['show_in_nav_menus'] : true,
+                'can_export'            => isset($postType['can_export']) ? $postType['can_export'] : false,
+                'has_archive'           => isset($postType['has_archive']) ? $postType['has_archive'] : true,
+                'exclude_from_search'   => isset($postType['exclude_from_search']) ? $postType['exclude_from_search'] : false,
+                'publicly_queryable'    => isset($postType['publicly_queryable']) ? $postType['publicly_queryable'] : true,
+                'capability_type'       => isset($postType['capability_type']) ? $postType['capability_type'] : 'post',
             );
+
             register_post_type($postType['slug'], $args);
         }
     }
