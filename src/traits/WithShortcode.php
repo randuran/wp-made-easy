@@ -4,7 +4,7 @@ namespace Randyduran\Traits;
 
 trait WithShortcode
 {
-    public $taxonomies = [];
+    public $shortcodes = [];
 
     final public function bootWithShortcode()
     {

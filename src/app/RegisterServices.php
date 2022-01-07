@@ -37,7 +37,7 @@ class RegisterServices
     /**
      * Initializes traits if they are found in class
      *
-     * @param [type] $service
+     * @param object $service
      * @return void
      */
     private static function bootTraits($service): void
