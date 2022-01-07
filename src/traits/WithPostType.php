@@ -54,8 +54,8 @@ trait WithPostType
 
             $args = array(
                 'labels'                => $labels,
-                'menu_icon'             => isset($postType['menu_icon']) ? $postType['menu_icon'] : 'dashicons-admin-post',
                 'description'           => __($postType['description'], $postType['text_domain']),
+                'menu_icon'             => isset($postType['menu_icon']) ? $postType['menu_icon'] : 'dashicons-admin-post',
                 'supports'              => $postType['supports'],
                 'taxonomies'            => $postType['taxonomies'],
                 'hierarchical'          => isset($postType['hierarchical']) ? $postType['hierarchical'] : false,
