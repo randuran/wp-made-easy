@@ -70,7 +70,6 @@ trait WithPostType
                 'publicly_queryable'    => isset($postType['publicly_queryable']) ? true : false,
                 'capability_type'       => isset($postType['capability_type']) ? 'page' : 'post',
             );
-
             register_post_type($postType['slug'], $args);
         }
     }
