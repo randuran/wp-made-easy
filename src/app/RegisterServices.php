@@ -45,7 +45,7 @@ class RegisterServices
         /**
          * Boot WithOptionPage if trait is found in the class.
          */
-        if (method_exists($service, 'WithOptionPage')) {
+        if (method_exists($service, 'bootWithOptionPage')) {
             $service->bootWithOptionPage();
         }
 
