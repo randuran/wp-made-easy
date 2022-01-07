@@ -70,7 +70,7 @@ trait WithPostType
                 'has_archive'           => isset($postType['has_archive']) ? $postType['has_archive'] : true,
                 'exclude_from_search'   => isset($postType['exclude_from_search']) ? $postType['exclude_from_search'] : false,
                 'publicly_queryable'    => isset($postType['publicly_queryable']) ? $postType['publicly_queryable'] : true,
-                'capability_type'       => isset($postType['capability_type']) ? $postType['capability_type'] : 'post',
+                'type'                  => isset($postType['capability_type']) ? $postType['capability_type'] : 'post',
             );
 
             register_post_type($postType['slug'], $args);
