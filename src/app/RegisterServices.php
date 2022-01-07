@@ -76,5 +76,12 @@ class RegisterServices
         if (method_exists($service, 'bootWithBlock')) {
             $service->bootWithBlock();
         }
+
+        /**
+         * Boot WithTemplates if trait is found in the class.
+         */
+        if (method_exists($service, 'bootWithTemplates')) {
+            $service->bootWithTemplates();
+        }
     }
 }
