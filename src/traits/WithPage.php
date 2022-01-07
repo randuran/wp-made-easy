@@ -5,7 +5,6 @@ namespace Randyduran\Traits;
 trait WithPage
 {
     public $pages = [];
-    public $subpages = [];
 
     /**
      * Undocumented function
@@ -16,10 +15,6 @@ trait WithPage
     {
         if (count($this->pages)) {
             add_action('admin_menu', [$this, 'register_menu_pages']);
-        }
-
-        if (count($this->subpages)) {
-            add_action('admin_menu', [$this, 'register_menu_subpages']);
         }
     }
 
@@ -40,15 +35,18 @@ trait WithPage
                 $page['icon'],
                 $page['position']
             );
-        }
-    }
 
-    /**
-     * Undocumented function
-     *
-     * @return void
-     */
-    public function register_menu_subpages()
-    {
+            if (isset($page['children'])) {
+                add_submenu_page(
+                    $page['slug'],
+                    $page['children']['title'],
+                    $page['children']['menu_title'],
+                    $page['children']['capability'],
+                    $page['children']['slug'],
+                    $page['children']['callback'],
+                    $page['children']['position'],
+                );
+            }
+        }
     }
 }
