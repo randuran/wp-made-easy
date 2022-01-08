@@ -4,6 +4,9 @@ namespace Randyduran\Traits;
 
 trait WithPostType
 {
+    /**
+     * @var array
+     */
     public $postTypes = [];
 
     final public function bootWithPostType()

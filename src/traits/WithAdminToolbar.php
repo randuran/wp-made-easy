@@ -4,6 +4,10 @@ namespace Randyduran\Traits;
 
 trait WithAdminToolbar
 {
+    /**
+     * @var array
+     */
+    public $toolbar = [];
 
     public function bootWithAdminToolbar()
     {
@@ -14,38 +18,31 @@ trait WithAdminToolbar
     {
         global $wp_admin_bar;
 
-        $args = [
-            'id' => 'custom_admin_bar_menu_id', // id must be unique
-            'title' => 'Custom Menu', // title for display in admin bar
-            'href' => 'http://add-your-link-here.com', // link for the achor tag
+        foreach ($this->toolbar as $toolbar) {
+            $args = [
+                'id' => $toolbar['id'],
+                'title' => $toolbar['title'],
+                'href' => $toolbar['link'],
+                'meta' => [
+                    'class' => $toolbar['class'],
+                ],
+            ];
+            $wp_admin_bar->add_menu($args);
 
-            // meta for link e.g: class, target, and custom data attributes etc
-            'meta' => [
-                'class' => 'custom_class', // your custom class
-            ],
-        ];
-        $wp_admin_bar->add_menu($args);
-
-        $args_submenu_1 = [
-            'id' => 'cusotm-sub-menu-1',
-            'title' => 'Sub menu-1',
-            'parent' => 'custom_admin_bar_menu_id', // add parent id in which you want to add sub menu
-            'href' => 'http://add-your-link-here.com',
-            'meta' => [
-                'class' => 'custom_sub_menu_class',
-            ],
-        ];
-        $wp_admin_bar->add_menu($args_submenu_1);
-
-        $args_submenu_2 = [
-            'id' => 'cusotm-sub-menu-2',
-            'title' => 'Sub menu-2',
-            'parent' => 'custom_admin_bar_menu_id', // add parent id in which you want to add sub menu
-            'href' => 'http://add-your-link-here.com',
-            'meta' => [
-                'class' => 'custom_sub_menu_class',
-            ],
-        ];
-        $wp_admin_bar->add_menu($args_submenu_2);
+            if (isset($toolbar['children'])) {
+                foreach ($toolbar['children'] as $key =>  $children) {
+                    ${'args_submenu_' . $key} = [
+                        'id' => $children['id'],
+                        'title' => $children['title'],
+                        'parent' => $toolbar['id'], // add parent id in which you want to add sub menu
+                        'href' => $children['link'],
+                        'meta' => [
+                            'class' => $children['class'],
+                        ],
+                    ];
+                    $wp_admin_bar->add_menu(${'args_submenu_' . $key});
+                }
+            }
+        }
     }
 }

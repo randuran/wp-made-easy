@@ -4,6 +4,9 @@ namespace Randyduran\Traits;
 
 trait WithAdminWidget
 {
+    /**
+     * @var array
+     */
     public $widgets = [];
 
     public function bootWithAdminWidget()

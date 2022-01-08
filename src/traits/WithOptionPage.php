@@ -4,6 +4,9 @@ namespace Randyduran\Traits;
 
 trait WithOptionPage
 {
+    /**
+     * @var array
+     */
     public $pages = [];
 
     /**

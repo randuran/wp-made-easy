@@ -4,6 +4,9 @@ namespace Randyduran\Traits;
 
 trait WithTaxonomy
 {
+    /**
+     * @var array
+     */
     public $taxonomies = [];
 
     final public function bootWithTaxonomy()
