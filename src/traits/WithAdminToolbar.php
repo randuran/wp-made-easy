@@ -14,30 +14,50 @@ trait WithAdminToolbar
         add_action('wp_before_admin_bar_render', [$this, 'addCustomAdminToolBar']);
     }
 
+    /**
+     * Generate toolbar menu items
+     *
+     * @return void
+     */
     function addCustomAdminToolBar()
     {
         global $wp_admin_bar;
 
+
+        /**
+         * Generate the parent element
+         */
         foreach ($this->toolbar as $toolbar) {
             $args = [
                 'id' => $toolbar['id'],
                 'title' => $toolbar['title'],
                 'href' => $toolbar['link'],
                 'meta' => [
-                    'class' => $toolbar['class'],
+                    'class' => isset($toolbar['class']) ? $toolbar['class'] : '',
+                    'onclick' => isset($toolbar['onclick']) ? $toolbar['onclick'] : '',
+                    'html' => isset($toolbar['html']) ? $toolbar['html'] : '',
+                    'target' => isset($toolbar['target']) ? $toolbar['target'] : '',
+                    'title' => isset($toolbar['title']) ? $toolbar['title'] : '',
                 ],
             ];
             $wp_admin_bar->add_menu($args);
 
+            /**
+             * Generate the children
+             */
             if (isset($toolbar['children'])) {
                 foreach ($toolbar['children'] as $key =>  $children) {
                     ${'args_submenu_' . $key} = [
                         'id' => $children['id'],
                         'title' => $children['title'],
-                        'parent' => $toolbar['id'], // add parent id in which you want to add sub menu
+                        'parent' => $toolbar['id'],
                         'href' => $children['link'],
                         'meta' => [
-                            'class' => $children['class'],
+                            'class' => isset($children['class']) ? $children['class'] : '',
+                            'onclick' => isset($children['onclick']) ? $children['onclick'] : '',
+                            'html' => isset($children['html']) ? $children['html'] : '',
+                            'target' => isset($children['target']) ? $children['target'] : '',
+                            'title' => isset($children['title']) ? $children['title'] : '',
                         ],
                     ];
                     $wp_admin_bar->add_menu(${'args_submenu_' . $key});
