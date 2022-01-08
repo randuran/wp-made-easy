@@ -23,7 +23,7 @@ trait WithAdminWidget
         global $wp_meta_boxes;
 
         foreach ($this->widgets as $widget) {
-            wp_add_dashboard_widget($widget['widget_id'], $widget['widget_name'], $widget['callback']);
+            wp_add_dashboard_widget($widget['slug'], $widget['name'], $widget['callback']);
         }
     }
 }
