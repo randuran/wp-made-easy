@@ -43,45 +43,45 @@ class RegisterServices
     private static function bootTraits($service): void
     {
         /**
-         * Boot WithOptionPage if trait is found in the class.
+         * Boot WithOptionPage if it is in class.
          */
         if (method_exists($service, 'bootWithOptionPage')) {
             $service->bootWithOptionPage();
         }
 
         /**
-         * Boot WithPostType if trait is found in the class.
+         * Boot WithPostType if it is in class.
          */
         if (method_exists($service, 'bootWithPostType')) {
             $service->bootWithPostType();
         }
 
         /**
-         * Boot WithTaxonomy if trait is found in the class.
+         * Boot WithTaxonomy if it is in class.
          */
         if (method_exists($service, 'bootWithTaxonomy')) {
             $service->bootWithTaxonomy();
         }
 
         /**
-         * Boot WithShortcode if trait is found in the class.
+         * Boot WithShortcode if it is in class.
          */
         if (method_exists($service, 'bootWithShortcode')) {
             $service->bootWithShortcode();
         }
 
         /**
-         * Boot WithBlock if trait is found in the class.
+         * Boot WithBlock if it is in class.
          */
         if (method_exists($service, 'bootWithBlock')) {
             $service->bootWithBlock();
         }
 
         /**
-         * Boot WithTemplates if trait is found in the class.
+         * Boot WithAdminWidget if it is in class.
          */
-        if (method_exists($service, 'bootWithTemplates')) {
-            $service->bootWithTemplates();
+        if (method_exists($service, 'bootWithAdminWidget')) {
+            $service->bootWithAdminWidget();
         }
     }
 }
