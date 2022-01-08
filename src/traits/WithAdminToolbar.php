@@ -37,7 +37,7 @@ trait WithAdminToolbar
                     'onclick' => isset($toolbar['onclick']) ? $toolbar['onclick'] : '',
                     'html' => isset($toolbar['html']) ? $toolbar['html'] : '',
                     'target' => isset($toolbar['target']) ? $toolbar['target'] : '',
-                    'title' => isset($toolbar['title']) ? $toolbar['title'] : '',
+                    'link_title' => isset($toolbar['link_title']) ? $toolbar['link_title'] : '',
                 ],
             ];
             $wp_admin_bar->add_menu($args);
@@ -57,7 +57,7 @@ trait WithAdminToolbar
                             'onclick' => isset($children['onclick']) ? $children['onclick'] : '',
                             'html' => isset($children['html']) ? $children['html'] : '',
                             'target' => isset($children['target']) ? $children['target'] : '',
-                            'title' => isset($children['title']) ? $children['title'] : '',
+                            'link_title' => isset($children['link_title']) ? $children['link_title'] : '',
                         ],
                     ];
                     $wp_admin_bar->add_menu(${'args_submenu_' . $key});
