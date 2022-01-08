@@ -83,5 +83,12 @@ class RegisterServices
         if (method_exists($service, 'bootWithAdminWidget')) {
             $service->bootWithAdminWidget();
         }
+
+        /**
+         * Boot WithAdminToolbar if it is in class.
+         */
+        if (method_exists($service, 'bootWithAdminToolbar')) {
+            $service->bootWithAdminToolbar();
+        }
     }
 }
