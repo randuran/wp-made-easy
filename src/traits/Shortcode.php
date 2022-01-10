@@ -2,14 +2,14 @@
 
 namespace WPME\Traits;
 
-trait WithShortcode
+trait Shortcode
 {
     /**
      * @var array
      */
     public $shortcodes = [];
 
-    public function bootWithShortcode()
+    public function bootShortcode()
     {
     }
 }

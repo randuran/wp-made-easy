@@ -43,59 +43,59 @@ class RegisterServices
     private static function bootTraits($service): void
     {
         /**
-         * Boot WithOptionPage if it is in class.
+         * Boot OptionPage if it is in class.
          */
-        if (method_exists($service, 'bootWithOptionPage')) {
-            $service->bootWithOptionPage();
+        if (method_exists($service, 'bootOptionPage')) {
+            $service->bootOptionPage();
         }
 
         /**
-         * Boot WithPostType if it is in class.
+         * Boot PostType if it is in class.
          */
-        if (method_exists($service, 'bootWithPostType')) {
-            $service->bootWithPostType();
+        if (method_exists($service, 'bootPostType')) {
+            $service->bootPostType();
         }
 
         /**
-         * Boot WithTaxonomy if it is in class.
+         * Boot Taxonomy if it is in class.
          */
-        if (method_exists($service, 'bootWithTaxonomy')) {
-            $service->bootWithTaxonomy();
+        if (method_exists($service, 'bootTaxonomy')) {
+            $service->bootTaxonomy();
         }
 
         /**
-         * Boot WithShortcode if it is in class.
+         * Boot Shortcode if it is in class.
          */
-        if (method_exists($service, 'bootWithShortcode')) {
-            $service->bootWithShortcode();
+        if (method_exists($service, 'bootShortcode')) {
+            $service->bootShortcode();
         }
 
         /**
-         * Boot WithACFBlock if it is in class.
+         * Boot ACFBlock if it is in class.
          */
-        if (method_exists($service, 'bootWithACFBlock')) {
-            $service->bootWithACFBlock();
+        if (method_exists($service, 'bootACFBlock')) {
+            $service->bootACFBlock();
         }
 
         /**
-         * Boot WithAdminWidget if it is in class.
+         * Boot AdminWidget if it is in class.
          */
-        if (method_exists($service, 'bootWithAdminWidget')) {
-            $service->bootWithAdminWidget();
+        if (method_exists($service, 'bootAdminWidget')) {
+            $service->bootAdminWidget();
         }
 
         /**
-         * Boot WithAdminToolbar if it is in class.
+         * Boot AdminToolbar if it is in class.
          */
-        if (method_exists($service, 'bootWithAdminToolbar')) {
-            $service->bootWithAdminToolbar();
+        if (method_exists($service, 'bootAdminToolbar')) {
+            $service->bootAdminToolbar();
         }
 
         /**
-         * Boot WithTemplate if it is in class.
+         * Boot Template if it is in class.
          */
-        if (method_exists($service, 'bootWithTemplate')) {
-            $service->bootWithTemplate();
+        if (method_exists($service, 'bootTemplate')) {
+            $service->bootTemplate();
         }
     }
 }

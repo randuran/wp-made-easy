@@ -2,14 +2,14 @@
 
 namespace WPME\Traits;
 
-trait WithACFBlock
+trait ACFBlock
 {
     /**
      * @var array
      */
     protected $acf_blocks = [];
 
-    public function bootWithACFBlock()
+    public function bootACFBlock()
     {
         add_action('acf/init', [$this, 'acf_blocks_init']);
     }

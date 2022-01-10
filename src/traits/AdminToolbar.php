@@ -2,14 +2,14 @@
 
 namespace WPME\Traits;
 
-trait WithAdminToolbar
+trait AdminToolbar
 {
     /**
      * @var array
      */
     protected $toolbar = [];
 
-    public function bootWithAdminToolbar()
+    public function bootAdminToolbar()
     {
         add_action('wp_before_admin_bar_render', [$this, 'addCustomAdminToolBar']);
     }

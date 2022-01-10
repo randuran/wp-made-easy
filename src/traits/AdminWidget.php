@@ -2,14 +2,14 @@
 
 namespace WPME\Traits;
 
-trait WithAdminWidget
+trait AdminWidget
 {
     /**
      * @var array
      */
     protected $widgets = [];
 
-    public function bootWithAdminWidget()
+    public function bootAdminWidget()
     {
         add_action('wp_dashboard_setup', [$this, 'registerCustomDashboardWidgets']);
     }

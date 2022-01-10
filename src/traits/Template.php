@@ -4,14 +4,14 @@ namespace WPME\Traits;
 
 use WPME\App\PluginPath;
 
-trait WithTemplate
+trait Template
 {
     public $page_templates = [];
     public $file_templates = [];
 
     private $plugin;
 
-    public function bootWithTemplate()
+    public function bootTemplate()
     {
         $this->plugin = new PluginPath;
 

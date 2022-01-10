@@ -2,14 +2,14 @@
 
 namespace WPME\Traits;
 
-trait WithTaxonomy
+trait Taxonomy
 {
     /**
      * @var array
      */
     protected $taxonomies = [];
 
-    public function bootWithTaxonomy()
+    public function bootTaxonomy()
     {
         if (count($this->taxonomies)) {
             add_action('init', [$this, 'registerTaxonomies'], 0);

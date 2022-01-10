@@ -2,7 +2,7 @@
 
 namespace WPME\Traits;
 
-trait WithOptionPage
+trait OptionPage
 {
     /**
      * @var array
@@ -14,7 +14,7 @@ trait WithOptionPage
      *
      * @return void
      */
-    public function bootWithOptionPage()
+    public function bootOptionPage()
     {
         if (count($this->pages)) {
             add_action('admin_menu', [$this, 'register_menu_pages']);

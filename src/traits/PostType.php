@@ -2,14 +2,14 @@
 
 namespace WPME\Traits;
 
-trait WithPostType
+trait PostType
 {
     /**
      * @var array
      */
     protected $postTypes = [];
 
-    public function bootWithPostType()
+    public function bootPostType()
     {
         if (count($this->postTypes)) {
             add_action('init', [$this, 'registerPostTypes'], 0);
