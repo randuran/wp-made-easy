@@ -16,5 +16,16 @@ trait WithACFBlock
 
     public function acf_blocks_init()
     {
+        foreach ($this->acf_blocks as $block) {
+            acf_register_block([
+                'name'             =>   $block['name'],
+                'title'            =>   __($block['title']),
+                'description'      =>   __($block['description']),
+                'render_callback'  =>   $block['callback'],
+                'category'         =>   $block['category'],
+                'icon'             =>   $block['icon'],
+                'keywords'         =>  $block['keywords'],
+            ]);
+        }
     }
 }

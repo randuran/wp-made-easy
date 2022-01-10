@@ -21,7 +21,7 @@ trait WithPostType
      *
      * @return void
      */
-    function registerPostTypes(): void
+    public function registerPostTypes(): void
     {
 
         foreach ($this->postTypes as $postType) {
