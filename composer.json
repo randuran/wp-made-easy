@@ -1,17 +1,17 @@
 {
-  "name": "randyduran/wp-myworkflow",
+  "name": "randyduran/wp-made-easy",
   "description": "A package that simplifies the task of creating plugins and templates in WordPress",
   "type": "project",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Randyduran\\": "src/"
+      "WPME\\": "src/"
     }
   },
   "authors": [
     {
       "name": "Randy Durán",
-      "email": "randy.duran@insimia.com"
+      "email": "contact@randyduran.dev"
     }
   ],
   "minimum-stability": "dev",
