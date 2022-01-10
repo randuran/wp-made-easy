@@ -1,6 +1,6 @@
 <?php
 
-namespace Randyduran\Interfaces;
+namespace WPME\Interfaces;
 
 interface AsService
 {

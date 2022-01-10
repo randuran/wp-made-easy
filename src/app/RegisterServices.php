@@ -1,6 +1,6 @@
 <?php
 
-namespace Randyduran\App;
+namespace WPME\App;
 
 class RegisterServices
 {

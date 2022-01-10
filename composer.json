@@ -11,7 +11,9 @@
   "authors": [
     {
       "name": "Randy Durán",
-      "email": "contact@randyduran.dev"
+      "email": "contact@randyduran.dev",
+      "homepage": "https://randyduran.dev",
+      "role": "Developer"
     }
   ],
   "minimum-stability": "dev",
