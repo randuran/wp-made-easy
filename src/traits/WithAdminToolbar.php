@@ -7,7 +7,7 @@ trait WithAdminToolbar
     /**
      * @var array
      */
-    public $toolbar = [];
+    protected $toolbar = [];
 
     public function bootWithAdminToolbar()
     {

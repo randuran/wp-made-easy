@@ -7,9 +7,9 @@ trait WithTaxonomy
     /**
      * @var array
      */
-    public $taxonomies = [];
+    protected $taxonomies = [];
 
-    final public function bootWithTaxonomy()
+    public function bootWithTaxonomy()
     {
         if (count($this->taxonomies)) {
             add_action('init', [$this, 'registerTaxonomies'], 0);

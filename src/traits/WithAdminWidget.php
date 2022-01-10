@@ -7,7 +7,7 @@ trait WithAdminWidget
     /**
      * @var array
      */
-    public $widgets = [];
+    protected $widgets = [];
 
     public function bootWithAdminWidget()
     {

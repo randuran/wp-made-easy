@@ -7,14 +7,14 @@ trait WithOptionPage
     /**
      * @var array
      */
-    public $pages = [];
+    protected $pages = [];
 
     /**
      * Undocumented function
      *
      * @return void
      */
-    final public function bootWithOptionPage()
+    public function bootWithOptionPage()
     {
         if (count($this->pages)) {
             add_action('admin_menu', [$this, 'register_menu_pages']);

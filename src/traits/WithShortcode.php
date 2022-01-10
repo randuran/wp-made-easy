@@ -9,7 +9,7 @@ trait WithShortcode
      */
     public $shortcodes = [];
 
-    final public function bootWithShortcode()
+    public function bootWithShortcode()
     {
     }
 }

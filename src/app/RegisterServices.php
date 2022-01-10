@@ -71,10 +71,10 @@ class RegisterServices
         }
 
         /**
-         * Boot WithBlock if it is in class.
+         * Boot WithACFBlock if it is in class.
          */
-        if (method_exists($service, 'bootWithBlock')) {
-            $service->bootWithBlock();
+        if (method_exists($service, 'bootWithACFBlock')) {
+            $service->bootWithACFBlock();
         }
 
         /**

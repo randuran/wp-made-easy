@@ -7,9 +7,9 @@ trait WithPostType
     /**
      * @var array
      */
-    public $postTypes = [];
+    protected $postTypes = [];
 
-    final public function bootWithPostType()
+    public function bootWithPostType()
     {
         if (count($this->postTypes)) {
             add_action('init', [$this, 'registerPostTypes'], 0);
