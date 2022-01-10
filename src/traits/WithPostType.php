@@ -1,6 +1,6 @@
 <?php
 
-namespace Randyduran\Traits;
+namespace WPME\Traits;
 
 trait WithPostType
 {
