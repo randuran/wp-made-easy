@@ -2,7 +2,7 @@
 
 namespace WPME\App;
 
-class ServicesController
+class ServicesManager
 {
     /**
      * Loop through the classes, initialize them
@@ -10,7 +10,7 @@ class ServicesController
      * 
      * @return void
      */
-    public static function register_services(): void
+    function register_services(): void
     {
         foreach ($this->services as $class) {
             $service = self::instantiate($class);
