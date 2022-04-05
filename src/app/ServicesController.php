@@ -4,7 +4,6 @@ namespace WPME\App;
 
 class ServicesController
 {
-
     /**
      * Loop through the classes, initialize them
      * and call the boot() method if it exist
@@ -13,7 +12,7 @@ class ServicesController
      */
     public static function register_services(): void
     {
-        foreach (self::services as $class) {
+        foreach (self::services() as $class) {
             $service = self::instantiate($class);
             if (method_exists($service, 'boot')) {
                 $service->boot();
